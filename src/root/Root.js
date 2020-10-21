@@ -5,6 +5,7 @@ import About from "./../components/about/about";
 import Offer from "./../components/offer/offer";
 import AppContext from "../context";
 import Realisation from "./../components/realisation/realisation";
+import Contact from "./../components/contact/contact";
 
 class Root extends React.Component {
   render() {
@@ -16,6 +17,7 @@ class Root extends React.Component {
           <About />
           <Offer />
           <Realisation/>
+          <Contact/>
         </AppContext.Provider>
       </>
     );
