@@ -15,6 +15,7 @@ const RealWrapper = styled.div`
   @media only screen and (max-width: 920px){
         grid-template-columns: 100vw;
         height: 240vh;
+        min-height: 2000px;
     }
 `;
 

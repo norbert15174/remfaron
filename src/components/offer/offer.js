@@ -15,6 +15,7 @@ const Wrapper = styled.div`
     @media only screen and (max-width: 920px){
         position: static;
         grid-template-columns: 90vw;
+        min-height: 2000px;
         height: 240vh;
     }
 `;
