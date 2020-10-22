@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import "./email.css";
 import EmailInput from "./emailinput";
+import SendIcon from "@material-ui/icons/Send";
 
 const FormContainer = styled.form`
   display: grid;
@@ -9,12 +10,26 @@ const FormContainer = styled.form`
   height: 100%;
   width: 100%;
   position: relative;
+  background-color: #070707;
+
+  @media only screen and (max-width: 920px){
+        grid-template-columns: 100vw;
+        height: 60vh;
+        min-height: 700px;
+    }
+
 `;
 
 const InputContainer = styled.div`
   width: 100%;
   position: relative;
   height: 100%;
+
+  @media only screen and (max-width: 920px){
+        height: 60vh;
+        top:-40%;
+    }
+
 `;
 
 const InputDescription = styled.textarea`
@@ -28,6 +43,8 @@ const InputDescription = styled.textarea`
   padding: 5px 5px 5px 5px;
   color: #43a4dc;
   font-size: 16px;
+
+
 `;
 const LabelDescription = styled.label`
   &:after {
@@ -42,6 +59,44 @@ const LabelDescription = styled.label`
   }
 `;
 
+const ButtonSumbitStyled = styled.button`
+  position: relative;
+  left: 40%;
+  top: 10%;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 7s ease infinite;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  padding: 5px 15px 5px 15px;
+  border-radius: 2px;
+  color: white;
+  vertical-align: middle;
+  cursor: pointer;
+  display: ${props => props.secondary ? 'none' : 'block'};
+  
+  @media only screen and (max-width: 920px){
+        display: ${props => props.secondary ? 'block' : 'none'};
+        top: 90%;
+        position: absolute;
+    }
+
+
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+`;
+
 class Email extends React.Component {
   render() {
     return (
@@ -50,6 +105,9 @@ class Email extends React.Component {
           <EmailInput />
           <EmailInput />
           <EmailInput />
+          <ButtonSumbitStyled>
+            <SendIcon style={{ fontSize: 40 }} />
+          </ButtonSumbitStyled>
         </InputContainer>
         <InputContainer>
           <InputDescription
@@ -58,6 +116,9 @@ class Email extends React.Component {
             placeholder=" "
           ></InputDescription>
           <LabelDescription className="labelek"></LabelDescription>
+          <ButtonSumbitStyled secondary>
+            <SendIcon style={{ fontSize: 40 }} />
+          </ButtonSumbitStyled>
         </InputContainer>
       </FormContainer>
     );

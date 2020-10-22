@@ -11,15 +11,45 @@
     top: -50px;
 }
 
+
+.MailInputChange:focus + .LabelInputChange {
+    color: #43A4DC;
+    font-size: 20px;
+    top: -30px;
+    left: 0;
+}
+
+.MailInputChange:not(:placeholder-shown) + .LabelInputChange {
+    color: #43A4DC;
+    font-size: 20px;
+    top: -30px;
+    left: 0;
+}
+
+
+
 @media only screen and (max-width: 920px) {
     .description:focus + .labelek:after{
-        color: grey;
+        color: #43A4DC;
         font-size: 20px;
         top: -40px;       
     }
     .description:not(:placeholder-shown) + .labelek:after{
         color: #43A4DC;
-        font-size: 30px;
+        font-size: 20px;
         top: -40px;
+    }
+    .MailInputChange:focus + .LabelInputChange {
+        color: #43A4DC;
+        font-size: 20px;
+        top: -30px;
+        left: 10%;
+    }
+    
+    .MailInputChange:not(:placeholder-shown) + .LabelInputChange {
+        color: #43A4DC;
+        font-size: 20px;
+        top: -30px;
+        left: 10%;
     }
 }

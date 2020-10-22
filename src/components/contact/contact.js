@@ -10,7 +10,7 @@ const ContactWrapper = styled.div`
   background-color: #070707;
 
   @media only screen and (max-width: 920px) {
-    height: 200vh;
+    height: 280vh;
     min-height: 1800px;
   }
 `;

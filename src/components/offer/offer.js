@@ -27,7 +27,9 @@ const OfferTag = styled.h1`
     margin-top: 10%;
     font-size: 70px;
     border: 1px solid black;
-    background-color: grey;
+    background: linear-gradient(-45deg, #575454, #383636, #8c8989, #ccc8c8);
+  background-size: 400% 400%;
+  animation: gradient 7s ease infinite;
     color: #1F1F20;
     padding: 100px 100px 100px 100px;
 

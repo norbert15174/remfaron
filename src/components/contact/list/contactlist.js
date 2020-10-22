@@ -1,8 +1,24 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import EmailIcon from "@material-ui/icons/Email";
 import PhoneIcon from "@material-ui/icons/Phone";
+
+
+const backgroundAnime = keyframes`
+
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+
+
+`;
 
 const ContactListHeader = styled.div`
   display: grid;
@@ -45,7 +61,9 @@ const IconParag = styled.p`
 const Phone = styled(PhoneIcon)`
 
     padding: 30px 30px 30px 30px;
-    background-color: #282829;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: ${backgroundAnime} 7s ease infinite;
     border-radius: 30px 30px 30px 30px;
     color: white;
 
@@ -55,7 +73,9 @@ const Phone = styled(PhoneIcon)`
 const FaceBook = styled(FacebookIcon)`
 
     padding: 30px 30px 30px 30px;
-    background-color: #282829;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: ${backgroundAnime} 7s ease infinite;
     border-radius: 30px 30px 30px 30px;
     color: white;
 
@@ -65,7 +85,9 @@ const FaceBook = styled(FacebookIcon)`
 const Email = styled(EmailIcon)`
 
     padding: 30px 30px 30px 30px;
-    background-color: #282829;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: ${backgroundAnime} 7s ease infinite;
     border-radius: 30px 30px 30px 30px;
     color: white;
 
