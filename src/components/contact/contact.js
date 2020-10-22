@@ -25,6 +25,9 @@ const ContactHeader = styled.h1`
   background-color: #1f1f20;
   margin-top: 0;
   color: white;
+  -webkit-box-shadow: 1px 5px 6px 5px rgba(31,31,32,1);
+-moz-box-shadow: 1px 5px 6px 5px rgba(31,31,32,1);
+box-shadow: 1px 5px 6px 5px rgba(31,31,32,1);
 
   @media only screen and (max-width: 920px) {
     height: 20vh;
@@ -40,9 +43,17 @@ const EmailtWrapper = styled.div`
 `;
 
 class Contact extends React.Component {
+
+  myRefContact = React.createRef();
+
+  componentDidMount = () => {
+    console.log(this.myRefContact.current.offsetTop);
+  }
+
+
   render() {
     return (
-      <ContactWrapper>
+      <ContactWrapper ref={this.myRefContact}>
         <ContactHeader>Skontaktuj się z nami</ContactHeader>
         <ContactList></ContactList>
         <EmailtWrapper>

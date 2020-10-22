@@ -101,7 +101,7 @@ const ContactList = () => (
       <IconParag>remfaron@gmail.com</IconParag>
     </IconContainer>
     <IconContainer>
-      <FaceBook style={{ fontSize: 130 }}></FaceBook>
+      <a href="https://www.facebook.com/remfaron"><FaceBook style={{ fontSize: 130 }}></FaceBook></a>
       <IconParag>Znajdz nas na Facebook'u</IconParag>
     </IconContainer>
     <IconContainer>

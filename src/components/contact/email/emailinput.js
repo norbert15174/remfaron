@@ -22,6 +22,9 @@ const MailInput = styled.input`
   padding: 10px 10px 10px 10px;
   font-size: 15px;
   background-color: #282829;
+  -webkit-box-shadow: 0px 0px 6px 2px rgba(35,166,213,1);
+-moz-box-shadow: 0px 0px 6px 2px rgba(35,166,213,1);
+box-shadow: 0px 0px 6px 2px rgba(35,166,213,1);
   outline: none;
   color: #43A4DC;
   border: none;
@@ -44,16 +47,28 @@ const LabelInput = styled.label`
 `;
 
 class EmailInput extends React.Component {
+
+
+  state = {
+    name: "",
+  }
+
+  constructor(props){
+    super(props);
+    this.state.name = props.name;
+  };
+
+
   render() {
     return (
       <MainInputContainer>
         <MailInput
           className="MailInputChange"
           type="text"
-          name="asd"
+          name={this.state.name}
           placeholder=" "
         />
-        <LabelInput className="LabelInputChange">imie</LabelInput>
+        <LabelInput className="LabelInputChange">{this.state.name}</LabelInput>
       </MainInputContainer>
     );
   }

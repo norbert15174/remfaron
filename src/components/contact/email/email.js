@@ -43,7 +43,9 @@ const InputDescription = styled.textarea`
   padding: 5px 5px 5px 5px;
   color: #43a4dc;
   font-size: 16px;
-
+  -webkit-box-shadow: 0px 0px 6px 2px rgba(35,166,213,1);
+-moz-box-shadow: 0px 0px 6px 2px rgba(35,166,213,1);
+box-shadow: 0px 0px 6px 2px rgba(35,166,213,1);
 
 `;
 const LabelDescription = styled.label`
@@ -102,9 +104,9 @@ class Email extends React.Component {
     return (
       <FormContainer>
         <InputContainer>
-          <EmailInput />
-          <EmailInput />
-          <EmailInput />
+          <EmailInput name="Imie"/>
+          <EmailInput name="E-mail"/>
+          <EmailInput name="Temat"/>
           <ButtonSumbitStyled>
             <SendIcon style={{ fontSize: 40 }} />
           </ButtonSumbitStyled>
